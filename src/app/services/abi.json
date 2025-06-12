@@ -1,18 +1,13 @@
-[	
+[
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			},
-			{
 				"internalType": "string",
-				"name": "_name",
+				"name": "id",
 				"type": "string"
 			}
 		],
-		"name": "addCandidate",
+		"name": "apagarPagamento",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -21,145 +16,150 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "_title",
+				"name": "idGrupo",
 				"type": "string"
 			}
 		],
-		"name": "createVoting",
+		"name": "criarGrupo",
 		"outputs": [],
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "novoValor",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "novaDescricao",
+				"type": "string"
+			}
+		],
+		"name": "editarPagamento",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "idGrupo",
+				"type": "string"
+			}
+		],
+		"name": "entrarNoGrupo",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "valor",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "descricao",
+				"type": "string"
+			}
+		],
+		"name": "registrarPagamento",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "grupoDoUsuario",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "grupoExiste",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "name",
-				"type": "string"
-			}
-		],
-		"name": "CandidateAdded",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			}
-		],
-		"name": "endVoting",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "candidateIndex",
-				"type": "uint256"
-			}
-		],
-		"name": "vote",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "candidateIndex",
-				"type": "uint256"
-			}
-		],
-		"name": "Voted",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "title",
-				"type": "string"
-			}
-		],
-		"name": "VotingCreated",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			}
-		],
-		"name": "VotingEnded",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			}
-		],
-		"name": "getCandidates",
+		"name": "listarPagamentosDoMeuGrupo",
 		"outputs": [
 			{
 				"components": [
 					{
 						"internalType": "string",
-						"name": "name",
+						"name": "id",
 						"type": "string"
 					},
 					{
 						"internalType": "uint256",
-						"name": "votes",
+						"name": "valor",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "descricao",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "data",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "ativo",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "idGrupo",
+						"type": "string"
 					}
 				],
-				"internalType": "struct Voting.Candidate[]",
+				"internalType": "struct GerenciadorDePagamentos.Pagamento[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -168,14 +168,8 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "sessionId",
-				"type": "uint256"
-			}
-		],
-		"name": "getTitle",
+		"inputs": [],
+		"name": "meuGrupo",
 		"outputs": [
 			{
 				"internalType": "string",
@@ -189,16 +183,46 @@
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
 				"internalType": "uint256",
-				"name": "sessionId",
+				"name": "",
 				"type": "uint256"
 			}
 		],
-		"name": "getWinner",
+		"name": "pagamentos",
 		"outputs": [
 			{
 				"internalType": "string",
-				"name": "winnerName",
+				"name": "id",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "valor",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "descricao",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "data",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "ativo",
+				"type": "bool"
+			},
+			{
+				"internalType": "string",
+				"name": "idGrupo",
 				"type": "string"
 			}
 		],
@@ -206,68 +230,24 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "owner",
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "participantesDoGrupo",
 		"outputs": [
 			{
 				"internalType": "address",
 				"name": "",
 				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "sessionCount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "testFunction",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "pure",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "votings",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "id",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "title",
-				"type": "string"
-			},
-			{
-				"internalType": "bool",
-				"name": "ended",
-				"type": "bool"
 			}
 		],
 		"stateMutability": "view",

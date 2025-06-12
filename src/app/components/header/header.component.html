@@ -9,9 +9,18 @@
 
     <div class="div-header-user">
         <div class="group">
-            <h4>meu grupo</h4>
-            <button mat-raised-button>Criar grupo</button>
-            <button mat-raised-button>Entrar no grupo</button>
+           <ng-container *ngIf="!statusMensagem; else mensagemStatus">
+                <button mat-raised-button color="primary" (click)="criarGrupo()">Criar grupo</button>
+                <button mat-raised-button color="accent">Entrar no grupo</button>
+            </ng-container>
+
+            <!-- Mensagem exibida quando houver statusMensagem -->
+            <ng-template #mensagemStatus>
+                <p [ngClass]="{ 'sucesso': statusMensagem.includes('sucesso'), 'erro': statusMensagem.includes('Erro') }"
+                class="status-mensagem">
+                {{ statusMensagem }}
+                </p>
+            </ng-template>
         </div>
         <div class="exit">
             <button mat-raised-button>sair</button>

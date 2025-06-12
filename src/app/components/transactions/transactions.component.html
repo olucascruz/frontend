@@ -7,7 +7,9 @@
         <div class="transactions-list-header">
             <p>Total: </p>
             
-            <button>me</button>
+            <button (click)="alternarFiltro()">
+                {{ filtroAtual }}
+            </button>
         </div>
         <ul>
             <li *ngFor="let produto of produtos">
