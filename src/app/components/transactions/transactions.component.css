@@ -1,0 +1,44 @@
+
+ul{
+    width: 600px;
+    margin: 0;
+    padding: 0;
+}
+li{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li>button{
+    width: 50px;
+    height: 30px;
+}
+
+.transactions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.transactions-list{
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+}
+
+.transactions-list-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.transactions-list-header > button{
+    width: 100px;
+    height: 40px;
+}
+
+

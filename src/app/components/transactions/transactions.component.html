@@ -1,0 +1,38 @@
+<div class="transactions">
+    <button mat-fab  color="primary" (click)="abrirModal()">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    <div class="transactions-list">
+        <div class="transactions-list-header">
+            <p>Total: </p>
+            
+            <button>me</button>
+        </div>
+        <ul>
+            <li *ngFor="let produto of produtos">
+                <h3>{{ produto.titulo }}</h3>
+                <p>Preço: R${{ produto.preco }}</p>
+                <p>Data: {{ produto.data }}</p>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                   <mat-icon>more_vert</mat-icon>
+                </button>
+            </li>
+        </ul>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="editar()">
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+            </button>
+
+            <button mat-menu-item (click)="excluir()">
+                <mat-icon>delete</mat-icon>
+                <span>Excluir</span>
+            </button>
+        </mat-menu>
+    </div>
+
+
+
+</div>

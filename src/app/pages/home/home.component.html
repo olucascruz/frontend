@@ -1,18 +1,14 @@
 <!-- HEADER -->
-<header class="header">
-  <div class="user-info">
-    <h2>Bem-vindo</h2>
-  </div>
-  <div class="actions">
-    <button class="btn-transacoes" (click)="callTest()" >Minhas Transações</button>
-    <button class="btn-sair">Sair</button>
-  </div>
-</header>
+<app-header  (toggle)="toggleView()"></app-header>   
 
-<!-- CONTEÚDO PRINCIPAL -->
-<main class="group-info">
-  <h2>Informações do Grupo</h2>
-  <p>Você já está em um grupo.</p>
-  <p><strong>ID do grupo:</strong> WDPX53</p>
-  <button class="btn-ver-transacoes">Ver Transações do Grupo</button>
-</main>
+
+
+<div class="content">
+  <div class="charts" *ngIf="showCharts">
+    <app-chart></app-chart>
+    <app-chart></app-chart>
+    <app-chart></app-chart>
+  </div>
+
+  <app-transactions *ngIf="!showCharts"></app-transactions>
+</div>

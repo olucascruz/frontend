@@ -1,10 +1,14 @@
 .body-login{
-
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: blueviolet;
     height: 100vh;
+}
+
+h1{
+    margin-bottom: 80px;
 }
 
 .div-button{

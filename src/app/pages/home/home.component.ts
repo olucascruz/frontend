@@ -11,7 +11,11 @@ import { MetamaskService } from '../../services/metamask.service';
 })
 export class HomeComponent {
   constructor(private metamaskService: MetamaskService) {}
-  
+   showCharts = false;
+
+  toggleView() {
+    this.showCharts = !this.showCharts;
+  }
   async callTest() {
     try {
       await this.metamaskService.callTest();
