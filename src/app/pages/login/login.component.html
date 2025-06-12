@@ -1,0 +1,12 @@
+<div class="body-login">
+
+    <div class="div-button"> 
+        
+        <h2>Login MetaMask</h2>
+        <button *ngIf="!walletAddress" (click)="login()">
+            <mat-icon>power_settings_new</mat-icon>
+        </button>
+        <p *ngIf="walletAddress">Carteira conectada: {{ walletAddress }}</p>
+    </div>
+
+</div>

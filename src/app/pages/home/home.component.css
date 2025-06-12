@@ -1,0 +1,84 @@
+/* GERAL */
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  background-color: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.user-info p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+}
+
+.actions button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.actions .btn-sair {
+  border: 1px solid #e65c5c;
+  color: #e65c5c;
+}
+
+.actions .btn-sair:hover {
+  background-color: #e65c5c;
+  color: white;
+}
+
+.actions .btn-transacoes:hover {
+  background-color: white;
+  color: black;
+}
+
+/* CONTEÚDO */
+.group-info {
+  background-color: #656f78;
+  padding: 30px;
+  border-radius: 6px;
+  margin-top: 0;
+}
+
+.group-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.group-info p {
+  margin: 6px 0;
+}
+
+.btn-ver-transacoes {
+  margin-top: 15px;
+  background-color: #00d5ff;
+  border: none;
+  color: black;
+  padding: 10px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-ver-transacoes:hover {
+  background-color: #00c0e0;
+}
