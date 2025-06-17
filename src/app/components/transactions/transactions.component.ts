@@ -50,7 +50,15 @@ export class TransactionsComponent implements OnInit{
     this.carregando = true;
     this.erro = null;
     try {
-      this.pagamentos = await this.metamaskService.listarPagamentosDoMeuGrupo();
+      const pagamentosDoGrupo = await this.metamaskService.verPagamentosDoGrupo();
+      this.pagamentos = pagamentosDoGrupo.map((p: any, idx: number) => ({
+        id: p.id ?? idx.toString(),
+        valor: p.valor,
+        descricao: p.descricao,
+        data: p.data,
+        ativo: p.ativo,
+        idGrupo: p.idGrupo
+      }));
     } catch (e: any) {
       this.erro = 'Erro ao carregar pagamentos: ' + (e.message || e);
     }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { MetamaskService } from '../../services/metamask.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { MetamaskService } from '../../services/metamask.service';
 })
 
 export class HeaderComponent implements OnInit {
-  grupoId: string = '';
+  grupoId?: string = '';
   @Output() toggle = new EventEmitter<void>();
 
   emitToggle() {
@@ -20,10 +20,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(private metamaskService: MetamaskService) {}
 
-  ngOnInit(): void {
-    setTimeout(() => {
+ async ngOnInit(): Promise<void> {
     this.getGrupo();
-    },3000);
   }
 
   async criarGrupo() {
@@ -34,18 +32,19 @@ export class HeaderComponent implements OnInit {
     }
 
     try {
-    await this.metamaskService.criarGrupo(this.grupoId);
-    
-    this.statusMensagem = `✅ Grupo "${this.grupoId}"`;
-    } catch (error: any) {
+    await this.metamaskService.criarGrupo(this.grupoId);    
+
+  } catch (error: any) {
       console.error('Erro ao criar grupo:', error);
-      this.statusMensagem = '❌ Erro ao criar grupo: ' + (error?.message || error);
+
     }
   }
 
   async getGrupo() {
     try {
-      this.grupoId = await this.metamaskService.meuGrupo();
+      const grupo = await this.metamaskService.verMeuGrupo();
+      if (!grupo) return;
+      this.grupoId = grupo.idGrupo;
       console.log('Grupo obtido:', this.grupoId);
 
       this.statusMensagem = `✅ Grupo:${this.grupoId}`;
