@@ -1,0 +1,167 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Container geral */
+  .dashboard-container {
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Header escuro */
+  header {
+    background-color: #20232a; /* quase preto azulado */
+    color: #61dafb; /* azul claro */
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  }
+  
+  header h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+  
+  header p {
+    font-size: 0.95rem;
+    color: #a0aec0; /* cinza claro */
+  }
+  
+  /* Botões no header */
+  header button {
+    border: 1.5px solid #61dafb;
+    color: #61dafb;
+    background-color: transparent;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  header button:hover {
+    background-color: #61dafb;
+    color: #20232a;
+  }
+  
+  /* Seção informações do grupo */
+  #grupo-usuario {
+    background-color: #282c34; /* tom escuro */
+    color: #cbd5e1; /* tom claro */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  }
+  
+  #grupo-usuario h2 {
+    margin-bottom: 15px;
+  }
+  
+  #grupo-actions button {
+    margin-right: 10px;
+  }
+  
+  /* Popup para entrar em grupo */
+  #popup-entrar-grupo {
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+  
+  #popup-entrar-grupo h3 {
+    margin-bottom: 15px;
+    color: #20232a;
+  }
+  
+  #popup-entrar-grupo input {
+    border: 1px solid #61dafb;
+    padding: 8px 10px;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  #popup-entrar-grupo button {
+    font-weight: 600;
+  }
+  
+  /* Gráficos */
+  .grafico-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .grafico-card h3 {
+    margin-bottom: 15px;
+    color: #20232a;
+  }
+  
+  /* Info extra */
+  #info-extra {
+    margin-top: 25px;
+    color: #20232a;
+    font-weight: 600;
+  }
+  
+  #info-extra p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  /* Lista de pagamentos */
+  #pagamentos {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  #pagamentos h3 {
+    margin-bottom: 15px;
+    color: #20232a;
+  }
+  
+  #lista-pagamentos {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  #lista-pagamentos .list-group-item {
+    border: 1px solid #61dafb;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    color: #20232a;
+    font-weight: 500;
+    background-color: #e6f0ff;
+  }
+  
+  /* Mensagem de erro */
+  #erro-contrato {
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    header .d-flex {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    header button {
+      margin: 10px 0 0 0;
+    }
+  }
+  

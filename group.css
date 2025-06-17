@@ -1,0 +1,81 @@
+/* Cores principais */
+:root {
+    --cor-fundo: #f8f9fa;
+    --cor-destaque: #0d6efd;
+    --cor-texto: #212529;
+    --cor-borda: #dee2e6;
+    --cor-cartao: #ffffff;
+    --cor-botao-voltar: #6c757d;
+  }
+  
+  body {
+    background-color: var(--cor-fundo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-texto);
+  }
+  
+  .container {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Botão Voltar */
+  .btn-voltar {
+    background-color: var(--cor-botao-voltar);
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-voltar:hover {
+    background-color: #5c636a;
+  }
+  
+  /* Títulos */
+  h2, h3 {
+    color: var(--cor-destaque);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Gráficos */
+  canvas {
+    background-color: var(--cor-cartao);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Lista de pagamentos */
+  .list-group {
+    margin-top: 1rem;
+  }
+  
+  .list-group-item {
+    background-color: var(--cor-cartao);
+    border: 1px solid var(--cor-borda);
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .list-group-item:hover {
+    transform: scale(1.01);
+    background-color: #f1f3f5;
+  }
+  
+  strong {
+    color: #343a40;
+  }
+  
+  em {
+    color: #6c757d;
+  }
+  

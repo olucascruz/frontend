@@ -1,0 +1,236 @@
+[
+	{
+	  "inputs": [
+		{
+		  "internalType": "string",
+		  "name": "idGrupo",
+		  "type": "string"
+		}
+	  ],
+	  "name": "criarGrupo",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "string",
+		  "name": "idGrupo",
+		  "type": "string"
+		}
+	  ],
+	  "name": "entrarNoGrupo",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "uint256",
+		  "name": "valor",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "descricao",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "tipo",
+		  "type": "string"
+		}
+	  ],
+	  "name": "registrarPagamento",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "string",
+		  "name": "id",
+		  "type": "string"
+		}
+	  ],
+	  "name": "apagarPagamento",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+		{
+		  "internalType": "string",
+		  "name": "id",
+		  "type": "string"
+		},
+		{
+		  "internalType": "uint256",
+		  "name": "novoValor",
+		  "type": "uint256"
+		},
+		{
+		  "internalType": "string",
+		  "name": "novaDescricao",
+		  "type": "string"
+		},
+		{
+		  "internalType": "string",
+		  "name": "novoTipo",
+		  "type": "string"
+		}
+	  ],
+	  "name": "editarPagamento",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "listarPagamentosDoMeuGrupo",
+	  "outputs": [
+		{
+		  "components": [
+			{
+			  "internalType": "uint256",
+			  "name": "valor",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "string",
+			  "name": "descricao",
+			  "type": "string"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "data",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "bool",
+			  "name": "ativo",
+			  "type": "bool"
+			},
+			{
+			  "internalType": "string",
+			  "name": "idGrupo",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "tipo",
+			  "type": "string"
+			},
+			{
+			  "internalType": "address",
+			  "name": "pagador",
+			  "type": "address"
+			}
+		  ],
+		  "internalType": "struct GerenciadorDePagamentos.Pagamento[]",
+		  "name": "",
+		  "type": "tuple[]"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "listarPagamentosPessoais",
+	  "outputs": [
+		{
+		  "components": [
+			{
+			  "internalType": "uint256",
+			  "name": "valor",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "string",
+			  "name": "descricao",
+			  "type": "string"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "data",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "bool",
+			  "name": "ativo",
+			  "type": "bool"
+			},
+			{
+			  "internalType": "string",
+			  "name": "idGrupo",
+			  "type": "string"
+			},
+			{
+			  "internalType": "string",
+			  "name": "tipo",
+			  "type": "string"
+			},
+			{
+			  "internalType": "address",
+			  "name": "pagador",
+			  "type": "address"
+			}
+		  ],
+		  "internalType": "struct GerenciadorDePagamentos.Pagamento[]",
+		  "name": "",
+		  "type": "tuple[]"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "meuGrupo",
+	  "outputs": [
+		{
+		  "components": [
+			{
+			  "internalType": "string",
+			  "name": "idGrupo",
+			  "type": "string"
+			},
+			{
+			  "internalType": "address[]",
+			  "name": "participantes",
+			  "type": "address[]"
+			},
+			{
+			  "internalType": "bool",
+			  "name": "existe",
+			  "type": "bool"
+			}
+		  ],
+		  "internalType": "struct GerenciadorDePagamentos.Grupo",
+		  "name": "",
+		  "type": "tuple"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "listarGrupos",
+	  "outputs": [
+		{
+		  "internalType": "string[]",
+		  "name": "",
+		  "type": "string[]"
+		}
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	}
+  ]
+  
