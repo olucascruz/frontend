@@ -207,7 +207,7 @@ async function registrarPagamento() {
     location.reload()
   } catch (err) {
     console.error("Erro ao registrar pagamento:", err);
-    alert("Erro ao registrar pagamento. Veja o console para detalhes.");
+    alert("Erro ao registrar pagamento. Veja se já está em um grupo.");
   }
 }
 
