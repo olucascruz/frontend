@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   document.getElementById("btn-logout").addEventListener("click", () => {
-    window.location.href = "login.html";
+    window.location.href = "../index.html";
   });
   
   // Redireciona para a página de grupo ao clicar em "Ver Transações do Grupo"

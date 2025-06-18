@@ -33,7 +33,7 @@ async function connectWallet() {
 
     // Redireciona para a tela principal
     window.contract = contract;
-    window.location.href = "home.html";
+    window.location.href = "./template/home.html";
   } catch (err) {
     console.error("Erro ao conectar carteira:", err);
     alert("Erro ao conectar carteira. Verifique o console.");
