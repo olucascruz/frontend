@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>BlockPay - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../style/home.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+
+    <!-- Header com botões principais -->
+    <header class="p-3 bg-dark text-white">
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+          <h2>Bem-vindo, <span id="nome-usuario">...</span>!</h2>
+          <p id="erro-contrato" class="text-danger" style="display:none;"></p>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <button class="btn btn-outline-primary me-2" id="btn-criar-grupo">Criar Grupo</button>
+          <button class="btn btn-outline-primary me-2" id="btn-entrar-grupo">Entrar em Grupo</button>
+          <button id="btn-registrar-pagamento" class="btn btn-success">Registrar Pagamento</button>
+          <button class="btn btn-outline-danger" id="btn-logout">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Informações do grupo -->
+    <section id="grupo-usuario" class="p-3 bg-secondary text-white">
+      <h2>Informações do Grupo</h2>
+      <p id="info-grupo">Carregando informações do grupo...</p>
+      <div id="grupo-actions" style="display: none;">
+        <button class="btn btn-primary me-2" id="btn-confirmar-criar-grupo">Criar Grupo</button>
+        <button class="btn btn-primary" id="btn-confirmar-entrar-grupo">Entrar em Grupo</button>
+      </div>
+      <button class="btn btn-info mt-2" id="btn-ver-transacoes-grupo" style="display: none;">Ver Transações do Grupo</button>
+    </section>
+
+    <!-- Popup para entrar em grupo -->
+    <div
+      id="popup-entrar-grupo"
+      class="rounded shadow-lg p-4 bg-white position-fixed"
+      style="display: none; top: 20%; left: 35%; z-index: 9999;"
+    >
+      <h3>Entrar em Grupo</h3>
+      <label for="input-id-grupo">ID do Grupo:</label>
+      <input class="form-control my-2" type="text" id="input-id-grupo" />
+      <button class="btn btn-success me-2" id="confirmar-entrada">Entrar</button>
+      <button class="btn btn-secondary" id="cancelar-popup">Cancelar</button>
+    </div>
+
+    <!-- Seção de Gráficos -->
+    <section id="graficos" class="container my-5">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Distribuição por Categoria</h5>
+              <canvas id="pizzaChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Evolução das Despesas</h5>
+              <canvas id="linhaChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Comparativo entre Categorias</h5>
+              <canvas id="barraChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="card shadow-sm bg-light">
+            <div class="card-body">
+              <h5 class="card-title">Resumo Geral</h5>
+              <p><strong>Total gasto:</strong> <span id="total-gasto">R$ 0,00</span></p>
+              <p><strong>Maior transação:</strong> <span id="maior-transacao">R$ 0,00</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Lista de Pagamentos -->
+    <section id="pagamentos" class="p-3">
+      <h3>Meus Pagamentos</h3>
+      <ul id="lista-pagamentos" class="list-group"></ul>
+    </section>
+  </div>
+
+  <!-- JS -->
+  <script type="module" src="../scripts/home.js"></script>
+  <script type="module" src="../scripts/grafico.js"></script>
+</body>
+</html>
